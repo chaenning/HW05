@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Unreal Projects\\HW05\\Source\\HW05\\HW05.Build.cs",
+		"D:\\Unreal Projects\\HW05\\Source\\HW05.Target.cs",
+		"D:\\Unreal Projects\\HW05\\Source\\HW05Editor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}
