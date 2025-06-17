@@ -10,10 +10,18 @@ UCLASS()
 class HW05_API AMyActor : public AActor
 {
 	GENERATED_BODY()
+
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* DefaultRoot;
 	
 public:	
 	// Sets default values for this actor's properties
 	AMyActor();
+
+	void Move();
+	int32 Step();
+	void CreateEvent();
+	float Distance(FVector prevPos, FVector nowPos);
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,4 +31,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+private:
+	UPROPERTY(EditAnywhere)
+	FVector Start = FVector(0, 0, 0);
+
+	int32 EventCnt = 0;
+	float TotalDistance = 0.0f;
 };
